@@ -15,8 +15,7 @@ bibliography: 2026-04-13-4-Dimensional-Objects-as-a-Tool-to-Study-Symmetry-Learn
 
 # table of contents
 toc:
-  - name: Summary
-  - name: Background
+  - name: Introduction
     subsections:
       - name: "Learning symmetries from data: An open problem in ML"
       - name: "Visual object rotation: A canonical and unresolved challenge"
@@ -37,13 +36,7 @@ toc:
 
 ---
 
-## Summary
-
-The ability to recognize an object regardless of how it is rotated or transformed remains a fundamental open problem in machine learning. Recent theoretical work has shown that conventional deep networks lack a dedicated mechanism to generalize symmetries beyond those explicitly embedded in their architecture <d-cite key="perin2025ability, dinh2026latent, ollikka2024comparison"></d-cite>, yet how humans solve this problem remains unclear. A key difficulty in studying human symmetry learning is that humans carry a lifetime of three-dimensional experience into every experiment, making it impossible to present them with truly novel test data in 3D. Here, we propose four-dimensional (4D) objects as a tool to overcome this limitation. We describe the construction of 4D Shepard-Metzler shapes, abstract structures built from connected tesseracts, projected onto a 2D screen via perspective geometry, and report a pilot mental rotation experiment in which the participant judged whether pairs of these shapes were identical or mirror images. Results reveal a graded pattern, performance remains near chance when both object identity and viewpoint vary without feedback, rises slightly above chance with trial-by-trial feedback, and approaches the ceiling when a single 4D shape becomes familiar (based on a pilot study with one participant). We discuss what this pattern suggests about the roles of feedback and object familiarity in learning new geometric symmetries, and we outline plans to run the same paradigm with machine learning models, asking whether the learning curves of humans and machines, faced with the same genuinely novel symmetric transformation, will converge or diverge.
-
----
-
-## Background
+## Introduction
 
 ### Learning symmetries from data: An open problem in ML
 
