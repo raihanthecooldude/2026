@@ -5,6 +5,7 @@ description: We investigate how graph directionality may influence GNN performan
 date: 2026-04-05
 future: true
 htmlwidgets: true
+hidden: true
 
 # Mermaid diagrams
 mermaid:

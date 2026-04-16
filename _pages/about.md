@@ -71,10 +71,6 @@ This blogpost track is directly inspired by the amazing [ICLR blogpost track](ht
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/Symmetry-Increase-and-Equivariant-Feature-Selection/' | relative_url }}">Symmetry Increase and Equivariant Feature Selection</a></td>
 <td style="padding: 0.75rem 0.5rem;">Anyi Li</td>
 </tr>
-<tr style="border-bottom: 1px solid #eee;">
-<td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/graph_directionality_matters/' | relative_url }}">The Role of Directionality in Graph Neural Networks</a></td>
-<td style="padding: 0.75rem 0.5rem;">Bertran Miquel</td>
-</tr>
 </tbody>
 </table>
 
