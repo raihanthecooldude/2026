@@ -2,7 +2,7 @@
 layout: distill
 title: 4-Dimensional Objects as a Tool to Study Symmetry Learning in Humans and Machines
 description: We propose four-dimensional Shepard-Metzler shapes as a tool to study symmetry learning in humans and machines.
-date: 2026-04-13
+date: 2026-04-10
 future: true
 htmlwidgets: true
 

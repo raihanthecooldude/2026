@@ -2,7 +2,7 @@
 layout: distill
 title: "Crystalite: A Lightweight Transformer for Efficient Crystal Modeling"
 description: "Crystalite is a lightweight diffusion Transformer for crystal generation and crystal structure prediction. This post covers its chemistry-aware atom encoding, geometry-aware attention mechanism, and benchmark results."
-date: 2026-04-15
+date: 2026-04-12
 future: true
 htmlwidgets: true
 authors:

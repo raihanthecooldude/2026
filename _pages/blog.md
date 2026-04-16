@@ -30,7 +30,7 @@ pagination:
       <h3>
         <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h3>
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}{% if post.authors %} · {% for author in post.authors %}{{ author.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</p>
+      <p class="post-meta">{% if post.authors %}{% for author in post.authors %}{{ author.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</p>
       <p class="post-description">{{ post.description }}</p>
     </li>
   {% endfor %}

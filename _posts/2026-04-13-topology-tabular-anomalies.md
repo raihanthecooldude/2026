@@ -2,7 +2,7 @@
 layout: distill
 title: "When the k-NN Metric Breaks: A Geometric Phase Transition in Local Density Estimation"
 description: "LOF operates on the k-NN graph metric — a non-Euclidean structure that breaks under contamination. We show LOF undergoes a sharp phase transition at c*≈k/n: below it, near-perfect detection; above it, blindness (sigmoid fit, R²=0.80). DTM, a geometric prior measuring manifold distance, resists. Persistent homology provides topological diagnosis but rarely justifies its O(n³) cost. Verified across 22 datasets with interactive tools."
-date: 2026-04-06
+date: 2026-04-13
 future: true
 htmlwidgets: true
 

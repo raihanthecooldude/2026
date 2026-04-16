@@ -6,7 +6,7 @@ description: >
   on a curved manifold deviate from one another. This post provides an intuitive introduction
   to Jacobi fields and illustrates their usefulness for machine learning on Riemannian manifolds,
   including an approximation result connecting tangent-space quantities to geodesic distances.
-date: 2026-03-24
+date: 2026-04-15
 future: true
 htmlwidgets: true
 

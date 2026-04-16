@@ -2,7 +2,7 @@
 layout: distill
 title: Graph Mamba - Rethinking Graph Learning
 description: Graph Mamba replaces message passing by turning local subgraphs into token sequences processed by selective state space models. We explain the idea with an interactive Cora demo and a minimal reference implementation.
-date: 2026-01-22
+date: 2026-04-07
 
 authors:
   - name: Vladislav Kalinichenko

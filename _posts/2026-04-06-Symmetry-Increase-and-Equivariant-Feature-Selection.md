@@ -2,7 +2,7 @@
 layout: distill
 title: Symmetry Increase and Equivariant Feature Selection
 description: This blog shows that symmetric inputs can induce representation degeneration due to the algebraic structure of the feature space itself, leading to loss of discriminative power, and provides practical guidance for selecting equivariant features.
-date: 2026-04-15
+date: 2026-04-06
 future: true
 htmlwidgets: true
 hidden: false

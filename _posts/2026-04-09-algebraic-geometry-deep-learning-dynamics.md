@@ -2,7 +2,7 @@
 layout: distill
 title: "Blowup and Blowdown in Deep Learning: Tracking Symmetry Breaking with Algebraic Geometry"
 description: We propose algebraic-geometric indicators to track how deep networks simultaneously expand representation dimension (blowup) and break input symmetries (blowdown) during training. We prove an orbit-averaged orthogonality theorem valid for arbitrary nonlinear networks and verify experimentally that generalization gap scales as the square root of effective dimension over sample size with symmetry breaking following a greedy information-theoretic order.
-date: 2026-04-15
+date: 2026-04-09
 future: true
 htmlwidgets: true
 

@@ -2,7 +2,7 @@
 layout: distill
 title: The Role of Directionality in Graph Neural Networks
 description: We investigate how graph directionality may influence GNN performance across homophilic and heterophilic benchmarks, suggesting it could be an underexplored factor.
-date: 2026-04-16
+date: 2026-04-05
 future: true
 htmlwidgets: true
 
