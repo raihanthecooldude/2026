@@ -65,7 +65,7 @@ This blogpost track is directly inspired by the amazing [ICLR blogpost track](ht
 </tr>
 <tr style="border-bottom: 1px solid #eee;">
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/graph-mamba/' | relative_url }}">Graph Mamba - Rethinking Graph Learning</a></td>
-<td style="padding: 0.75rem 0.5rem;">Vladislav Kalinichenko</td>
+<td style="padding: 0.75rem 0.5rem;">Vladislav Kalinichenko, Polina Korobeinikova</td>
 </tr>
 <tr style="border-bottom: 1px solid #eee;">
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/Symmetry-Increase-and-Equivariant-Feature-Selection/' | relative_url }}">Symmetry Increase and Equivariant Feature Selection</a></td>
