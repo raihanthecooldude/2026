@@ -15,7 +15,7 @@ The [GRaM](https://gram-workshop.github.io/) workshop aims to provide a platform
 
 This blogpost track is directly inspired by the amazing [ICLR blogpost track](https://iclr-blogposts.github.io).
 
-**Authors are requested to deanonymize their posts and submit any minimal final changes by April 20, 2026.**
+**Authors are requested to deanonymize their posts, include affiliations, and submit any final revisions by April 20, 2026.**
 
 <div style="margin: 2rem 0;"><hr></div>
 
