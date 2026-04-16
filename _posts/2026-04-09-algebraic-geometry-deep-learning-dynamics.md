@@ -6,9 +6,10 @@ date: 2026-04-09
 future: true
 htmlwidgets: true
 
-# Anonymize when submitting
 authors:
-  - name: Anonymous
+  - name: Hikaru Matsuoka
+    affiliations:
+      name: "Associate Professor, Dept. of Information Security, University of Nagasaki / Researcher, Laboratory for Statistical Genetics, RIKEN Center for Advanced Intelligence Project (AIP)"
 
 bibliography: 2026-04-15-algebraic-geometry-deep-learning-dynamics.bib
 
@@ -96,7 +97,7 @@ For $$ D_4 $$, the subgroup lattice contains 10 subgroups arranged in a diamond-
 Let $$ G $$ be a finite group acting on the input space (in our case, $$ D_4 $$ acting on $$ 32 \times 32 $$ images). For any intermediate representation $$ h_k(x) $$ at layer $$ k $$, we define the **Reynolds operator** <d-cite key="serre1977linear"></d-cite>:
 
 $$
-P_G = \frac{1}{|G|} \sum_{g \in G} \rho_k(g)
+P_G = \frac{1}{\lvert G \rvert} \sum_{g \in G} \rho_k(g)
 $$
 
 which projects onto $$ G $$-invariant subspaces. This yields a canonical decomposition:
@@ -113,7 +114,7 @@ where $$ h_k^{\text{inv}} = P_G \, h_k $$ is the **invariant component** (direct
 We define a continuous **symmetry index** per layer:
 
 $$
-S_k(G) = \frac{1}{|G|} \sum_{g \in G} \cos\bigl(h_k(x),\; h_k(g \cdot x)\bigr)
+S_k(G) = \frac{1}{\lvert G \rvert} \sum_{g \in G} \cos\bigl(h_k(x),\; h_k(g \cdot x)\bigr)
 $$
 
 When $$ S_k = 1 $$, layer $$ k $$ is fully $$ G $$-invariant (maximum blowdown: all symmetry directions collapsed); when $$ S_k $$ decreases, the layer has broken symmetry to exploit class-discriminative directions (blowup has introduced new distinguishing dimensions). This provides a continuous relaxation of the discrete blowdown path through the subgroup lattice of $$ G $$.
@@ -122,7 +123,7 @@ When $$ S_k = 1 $$, layer $$ k $$ is fully $$ G $$-invariant (maximum blowdown: 
 
 The following theorem is the theoretical cornerstone of our framework. It establishes that the invariant and variant components of *any* function are orthogonal when averaged over the group orbit --- regardless of the function's internal structure. In geometric terms, the blowup directions and blowdown directions do not interfere on average.
 
-**Theorem 1 (Orbit-Averaged Orthogonality).** *Let $$ G $$ be a finite group acting on a space $$ \mathcal{X} $$, and let $$ h: \mathcal{X} \to \mathbb{R}^d $$ be an arbitrary (possibly nonlinear) function. Define $$ h^{\text{inv}}(x) = \frac{1}{|G|}\sum_{g \in G} h(g \cdot x) $$ and $$ h^{\text{var}}(x) = h(x) - h^{\text{inv}}(x) $$. Then for every $$ x \in \mathcal{X} $$:*
+**Theorem 1 (Orbit-Averaged Orthogonality).** *Let $$ G $$ be a finite group acting on a space $$ \mathcal{X} $$, and let $$ h: \mathcal{X} \to \mathbb{R}^d $$ be an arbitrary (possibly nonlinear) function. Define $$ h^{\text{inv}}(x) = \frac{1}{\lvert G \rvert}\sum_{g \in G} h(g \cdot x) $$ and $$ h^{\text{var}}(x) = h(x) - h^{\text{inv}}(x) $$. Then for every $$ x \in \mathcal{X} $$:*
 
 $$
 \sum_{g \in G} \langle h^{\text{inv}}(x),\; h^{\text{var}}(g \cdot x) \rangle = 0
@@ -143,26 +144,26 @@ $$
 For the first sum, note that $$ h^{\text{inv}}(x) $$ does not depend on $$ g $$, so we can factor it out of the inner product and use the definition of $$ h^{\text{inv}} $$:
 
 $$
-\sum_{g \in G} \langle h^{\text{inv}}(x),\; h(g \cdot x) \rangle = \Bigl\langle h^{\text{inv}}(x),\; \sum_{g \in G} h(g \cdot x) \Bigr\rangle = |G| \cdot \langle h^{\text{inv}}(x),\; h^{\text{inv}}(x) \rangle
+\sum_{g \in G} \langle h^{\text{inv}}(x),\; h(g \cdot x) \rangle = \Bigl\langle h^{\text{inv}}(x),\; \sum_{g \in G} h(g \cdot x) \Bigr\rangle = \lvert G \rvert \cdot \langle h^{\text{inv}}(x),\; h^{\text{inv}}(x) \rangle
 $$
 
-For the second sum, we use the key property of $$ h^{\text{inv}} $$: by definition, $$ h^{\text{inv}}(g \cdot x) = \frac{1}{|G|}\sum_{g' \in G} h(g' \cdot (g \cdot x)) $$. Since $$ g' \mapsto g' g $$ is a bijection on $$ G $$ (this is where the group structure is used), we have $$ h^{\text{inv}}(g \cdot x) = h^{\text{inv}}(x) $$ for all $$ g \in G $$. Therefore:
+For the second sum, we use the key property of $$ h^{\text{inv}} $$: by definition, $$ h^{\text{inv}}(g \cdot x) = \frac{1}{\lvert G \rvert}\sum_{g' \in G} h(g' \cdot (g \cdot x)) $$. Since $$ g' \mapsto g' g $$ is a bijection on $$ G $$ (this is where the group structure is used), we have $$ h^{\text{inv}}(g \cdot x) = h^{\text{inv}}(x) $$ for all $$ g \in G $$. Therefore:
 
 $$
-\sum_{g \in G} \langle h^{\text{inv}}(x),\; h^{\text{inv}}(g \cdot x) \rangle = \sum_{g \in G} \langle h^{\text{inv}}(x),\; h^{\text{inv}}(x) \rangle = |G| \cdot \langle h^{\text{inv}}(x),\; h^{\text{inv}}(x) \rangle
+\sum_{g \in G} \langle h^{\text{inv}}(x),\; h^{\text{inv}}(g \cdot x) \rangle = \sum_{g \in G} \langle h^{\text{inv}}(x),\; h^{\text{inv}}(x) \rangle = \lvert G \rvert \cdot \langle h^{\text{inv}}(x),\; h^{\text{inv}}(x) \rangle
 $$
 
-Subtracting: $$ \text{LHS} = |G| \cdot \|h^{\text{inv}}(x)\|^2 - |G| \cdot \|h^{\text{inv}}(x)\|^2 = 0 $$. $$\square$$
+Subtracting: $$ \text{LHS} = \lvert G \rvert \cdot \lVert h^{\text{inv}}(x)\rVert^2 - \lvert G \rvert \cdot \lVert h^{\text{inv}}(x)\rVert^2 = 0 $$. $$\square$$
 
 **Remark.** The proof uses *only* the fact that left multiplication $$ g' \mapsto g'g $$ is a bijection on $$ G $$ --- a purely group-theoretic property. No assumptions about linearity, smoothness, or differentiability of $$ h $$ are required. This means the theorem applies directly to deep networks with ReLU activations, BatchNorm, pooling, skip connections, or any other nonlinear operations. This universality distinguishes our result from equivariant network theory <d-cite key="cohen2016group"></d-cite><d-cite key="weiler2019general"></d-cite><d-cite key="maron2019invariant"></d-cite>, which requires architectures to be equivariant by construction.
 
 **Corollary 1 (Pythagorean decomposition of orbit variance).** *For any $$ h $$ and $$ x $$:*
 
 $$
-\frac{1}{|G|} \sum_{g \in G} \|h(g \cdot x)\|^2 = \|h^{\text{inv}}(x)\|^2 + \frac{1}{|G|} \sum_{g \in G} \|h^{\text{var}}(g \cdot x)\|^2
+\frac{1}{\lvert G \rvert} \sum_{g \in G} \lVert h(g \cdot x)\rVert^2 = \lVert h^{\text{inv}}(x)\rVert^2 + \frac{1}{\lvert G \rvert} \sum_{g \in G} \lVert h^{\text{var}}(g \cdot x)\rVert^2
 $$
 
-This follows by expanding $$ \|h(g \cdot x)\|^2 = \|h^{\text{inv}}(x) + h^{\text{var}}(g \cdot x)\|^2 $$ and applying the orbit-averaged orthogonality to eliminate the cross term. The corollary provides a clean variance decomposition: **the total representation energy splits into blowdown energy (invariant part) and blowup energy (variant part) with no interference**, analogous to the ANOVA decomposition in statistics.
+This follows by expanding $$ \lVert h(g \cdot x)\rVert^2 = \lVert h^{\text{inv}}(x) + h^{\text{var}}(g \cdot x)\rVert^2 $$ and applying the orbit-averaged orthogonality to eliminate the cross term. The corollary provides a clean variance decomposition: **the total representation energy splits into blowdown energy (invariant part) and blowup energy (variant part) with no interference**, analogous to the ANOVA decomposition in statistics.
 
 ### Effective Dimension via Participation Ratio
 
@@ -181,7 +182,7 @@ The Reynolds decomposition and participation ratio are linked by the following p
 Let $$ d_{\text{eff}}^{\text{inv}} $$ denote the effective dimension of the invariant component. Then:
 
 $$
-d_{\text{eff}}(h_k) \geq d_{\text{eff}}^{\text{inv}} + (1 - S_k)^2 \cdot d_k \left(1 - \frac{1}{|G|}\right)
+d_{\text{eff}}(h_k) \geq d_{\text{eff}}^{\text{inv}} + (1 - S_k)^2 \cdot d_k \left(1 - \frac{1}{\lvert G \rvert}\right)
 $$
 
 where $$ d_k $$ is the ambient feature dimension. This inequality captures the essence of the blowup-blowdown coupling: **as $$ S_k $$ decreases (more symmetry broken = more blowdown along the subgroup lattice), the effective dimension must increase (more blowup) by at least the squared deviation from invariance.** The proof relies on the Pythagorean decomposition from Corollary 1, applied to the eigenspectrum of the feature covariance.
@@ -194,7 +195,7 @@ $$
 \text{Generalization Gap} \leq C \cdot \sqrt{\frac{d_{\text{eff}}}{N}}
 $$
 
-where $$ N $$ is the sample size and $$ C $$ is a constant depending on the loss class. This connects the geometric quantity $$ d_{\text{eff}} $$ (the degree of blowup) directly to statistical learning theory: **more blowup means higher capacity, which requires more data to generalize.** Furthermore, since $$ G $$-invariant features satisfy $$ d_{\text{eff}}^{\text{inv}} \leq d_{\text{eff}} / |G| $$ <d-cite key="elesedy2021provably"></d-cite><d-cite key="lyle2020benefits"></d-cite>, enforcing equivariance (preventing unnecessary blowup) can improve generalization by a factor of $$ \sqrt{|G|} $$ (Corollary 2). This refines prior qualitative arguments about the benefits of invariance <d-cite key="bietti2019group"></d-cite><d-cite key="bronstein2021geometric"></d-cite> into a precise, testable prediction.
+where $$ N $$ is the sample size and $$ C $$ is a constant depending on the loss class. This connects the geometric quantity $$ d_{\text{eff}} $$ (the degree of blowup) directly to statistical learning theory: **more blowup means higher capacity, which requires more data to generalize.** Furthermore, since $$ G $$-invariant features satisfy $$ d_{\text{eff}}^{\text{inv}} \leq d_{\text{eff}} / \lvert G \rvert $$ <d-cite key="elesedy2021provably"></d-cite><d-cite key="lyle2020benefits"></d-cite>, enforcing equivariance (preventing unnecessary blowup) can improve generalization by a factor of $$ \sqrt{\lvert G \rvert} $$ (Corollary 2). This refines prior qualitative arguments about the benefits of invariance <d-cite key="bietti2019group"></d-cite><d-cite key="bronstein2021geometric"></d-cite> into a precise, testable prediction.
 
 ### Conjecture 1: Greedy Blowdown Principle
 
@@ -270,7 +271,7 @@ The generalization gap decreases monotonically as $$ N $$ increases, and the sca
 
 ### Experiment 4: D4 Data Augmentation
 
-Enforcing $$ D_4 $$ symmetry through data augmentation provides a direct test of our Corollary 2: invariant features (no unnecessary blowup) should reduce the generalization gap by approximately $$ \sqrt{|G|} = \sqrt{8} \approx 2.83 $$.
+Enforcing $$ D_4 $$ symmetry through data augmentation provides a direct test of our Corollary 2: invariant features (no unnecessary blowup) should reduce the generalization gap by approximately $$ \sqrt{\lvert G \rvert} = \sqrt{8} \approx 2.83 $$.
 
 | Condition | Test Acc | Gap | $$ d_{\text{eff}} $$ | $$ S_k $$ |
 | --- | --- | --- | --- | --- |
@@ -297,7 +298,7 @@ $$ D_4 $$ augmentation reduces the generalization gap from 0.262 to 0.093 --- a 
 
 **Connection to singular learning theory.** Our blowup-blowdown framework in *representation space* has a deep parallel with Watanabe's singular learning theory <d-cite key="watanabe2009algebraic"></d-cite>, which applies Hironaka's resolution of singularities (blowup) in *parameter space*. In Watanabe's framework, the singularities of the Kullback-Leibler divergence landscape are resolved via blowup to compute the real log canonical threshold (RLCT) $$ \lambda $$, yielding the Bayesian generalization error $$ \sim \lambda / n $$. In our framework, the analogous quantity is $$ d_{\text{eff}} $$, which measures effective dimension in representation space, yielding the SGD-based generalization gap $$ \sim \sqrt{d_{\text{eff}}/N} $$. Both approaches demonstrate that symmetry reduces model complexity --- Watanabe's RLCT decreases when the model has symmetries, while our $$ d_{\text{eff}} $$ decreases under equivariance --- but they operate in complementary spaces and learning regimes (Bayesian vs. frequentist). The fact that algebraic-geometric blowup appears independently in both parameter-space and representation-space analyses suggests a deeper structural principle connecting the two.
 
-**The $$ \sqrt{|G|} $$ prediction.** The close match between the observed gap reduction factor (2.82) and the predicted $$ \sqrt{8} \approx 2.83 $$ is notable. While prior work has argued qualitatively that equivariance helps generalization <d-cite key="bronstein2021geometric"></d-cite><d-cite key="bietti2019group"></d-cite>, our framework provides a quantitative prediction that can be falsified experimentally. The fact that a standard (non-equivariant) CNN with data augmentation achieves almost exactly the theoretical improvement suggests that the bottleneck is indeed the effective dimension of the invariant subspace, not architectural constraints.
+**The $$ \sqrt{\lvert G \rvert} $$ prediction.** The close match between the observed gap reduction factor (2.82) and the predicted $$ \sqrt{8} \approx 2.83 $$ is notable. While prior work has argued qualitatively that equivariance helps generalization <d-cite key="bronstein2021geometric"></d-cite><d-cite key="bietti2019group"></d-cite>, our framework provides a quantitative prediction that can be falsified experimentally. The fact that a standard (non-equivariant) CNN with data augmentation achieves almost exactly the theoretical improvement suggests that the bottleneck is indeed the effective dimension of the invariant subspace, not architectural constraints.
 
 **Limitations and open problems.** The constant $$ C $$ in Theorem 2 is not tight --- the ratio $$ \text{Gap}/\sqrt{d_{\text{eff}}/N} $$ ranges from 1.25 to 3.33 across our experiments, suggesting that a refined bound should account for the interaction between $$ d_{\text{eff}} $$ and $$ N $$. Additionally, our Gaussian assumption for the greedy blowdown principle is an idealization; extending to more realistic data distributions is an important direction. Finally, exploring whether our continuous symmetry index $$ S_k $$ can be related to the discrete poset-blowdown types discussed by Takamura <d-cite key="takamura2022blowdown"></d-cite> is an intriguing open question.
 
@@ -309,7 +310,7 @@ $$ D_4 $$ augmentation reduces the generalization gap from 0.262 to 0.093 --- a 
 
 **Generalization theory.** Bartlett et al. <d-cite key="bartlett2017spectrally"></d-cite> established spectrally-normalized margin bounds, and Neyshabur et al. <d-cite key="neyshabur2018pac"></d-cite> developed PAC-Bayesian approaches to neural network generalization. Golowich et al. <d-cite key="golowich2018size"></d-cite> proved size-independent bounds. Our Theorem 2 connects these norm-based frameworks to the geometric quantity $$ d_{\text{eff}} $$, providing a new lens on generalization through the blowup-blowdown tradeoff.
 
-**Benefits of invariance.** Elesedy and Zaidi <d-cite key="elesedy2021provably"></d-cite> proved strict generalization benefits of equivariance, and Lyle et al. <d-cite key="lyle2020benefits"></d-cite> analyzed the benefits of invariance in neural networks. Bietti and Mairal <d-cite key="bietti2019group"></d-cite> studied stability to deformations. Our $$ \sqrt{|G|} $$ prediction provides a quantitative link between these theoretical results and empirically measurable quantities.
+**Benefits of invariance.** Elesedy and Zaidi <d-cite key="elesedy2021provably"></d-cite> proved strict generalization benefits of equivariance, and Lyle et al. <d-cite key="lyle2020benefits"></d-cite> analyzed the benefits of invariance in neural networks. Bietti and Mairal <d-cite key="bietti2019group"></d-cite> studied stability to deformations. Our $$ \sqrt{\lvert G \rvert} $$ prediction provides a quantitative link between these theoretical results and empirically measurable quantities.
 
 **Intrinsic dimension of representations.** Ansuini et al. <d-cite key="ansuini2019intrinsic"></d-cite> showed that the intrinsic dimension of deep network representations follows a characteristic pattern across layers. Facco et al. <d-cite key="facco2017estimating"></d-cite> developed the TwoNN estimator for intrinsic dimension. Our work extends this line by connecting dimensional changes (blowup) to symmetry breaking (blowdown) via the core inequality.
 
@@ -333,6 +334,6 @@ We have presented an algebraic-geometric framework for understanding deep learni
 
 Motivated in part by Takamura's <d-cite key="takamura2022blowdown"></d-cite> study of blowdown-type maps on subgroup posets, we introduced continuous indicators --- the symmetry index $$ S_k(G) $$ (measuring blowdown) and effective dimension $$ d_{\text{eff}} $$ (measuring blowup) --- that track how neural networks navigate the subgroup lattice during training.
 
-The framework makes concrete, testable predictions: generalization scales as $$ O(\sqrt{d_{\text{eff}}/N}) $$ (Theorem 2), symmetry breaking follows a greedy information-theoretic order (Conjecture 1), and enforcing $$ G $$-invariance improves generalization by $$ \sqrt{|G|} $$ (Corollary 2). All three predictions are confirmed by our CIFAR-10 experiments with the $$ D_4 $$ symmetry group. We also proved an orbit-averaged orthogonality theorem (Theorem 1) that holds for arbitrary nonlinear networks, establishing that blowup and blowdown directions are orthogonal on average --- the rigorous foundation for the Reynolds decomposition in deep learning.
+The framework makes concrete, testable predictions: generalization scales as $$ O(\sqrt{d_{\text{eff}}/N}) $$ (Theorem 2), symmetry breaking follows a greedy information-theoretic order (Conjecture 1), and enforcing $$ G $$-invariance improves generalization by $$ \sqrt{\lvert G \rvert} $$ (Corollary 2). All three predictions are confirmed by our CIFAR-10 experiments with the $$ D_4 $$ symmetry group. We also proved an orbit-averaged orthogonality theorem (Theorem 1) that holds for arbitrary nonlinear networks, establishing that blowup and blowdown directions are orthogonal on average --- the rigorous foundation for the Reynolds decomposition in deep learning.
 
 We believe this perspective opens a fruitful bridge between algebraic geometry and deep learning theory. Future directions include exploring possible connections between the continuous symmetry index and the discrete poset-blowdown types studied by Takamura <d-cite key="takamura2022blowdown"></d-cite>, extending the framework to continuous symmetry groups (e.g., SO(3) for 3D data), and developing architectural designs that exploit the greedy blowdown principle for efficient symmetry breaking.
