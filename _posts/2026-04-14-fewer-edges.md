@@ -7,7 +7,18 @@ future: true
 htmlwidgets: true
 
 authors:
-  - name: Pau Hidalgo
+  - name: Pau Hidalgo-Pujol
+    affiliations:
+      name: Nostrum Biodiscovery, Universitat Politècnica de Catalunya
+  - name: Manel Gil-Sorribes
+    affiliations:
+      name: Nostrum Biodiscovery
+  - name: Alexis Molina
+    affiliations:
+      name: Nostrum Biodiscovery
+  - name: Bertran Miquel-Oliver
+    affiliations:
+      name: Barcelona Supercomputing Center, Universitat Politècnica de Catalunya
 
 bibliography: 2026-04-14-fewer-edges.bib
 

@@ -37,7 +37,7 @@ This blogpost track is directly inspired by the amazing [ICLR blogpost track](ht
 </tr>
 <tr style="border-bottom: 1px solid #eee;">
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/fewer-edges/' | relative_url }}">Fewer Edges, Faster Protein Graph Learning</a></td>
-<td style="padding: 0.75rem 0.5rem;">Pau Hidalgo</td>
+<td style="padding: 0.75rem 0.5rem;">Pau Hidalgo-Pujol, Manel Gil-Sorribes, Alexis Molina, Bertran Miquel-Oliver</td>
 </tr>
 <tr style="border-bottom: 1px solid #eee;">
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/topology-tabular-anomalies/' | relative_url }}">When the k-NN Metric Breaks</a></td>
@@ -69,7 +69,11 @@ This blogpost track is directly inspired by the amazing [ICLR blogpost track](ht
 </tr>
 <tr style="border-bottom: 1px solid #eee;">
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/Symmetry-Increase-and-Equivariant-Feature-Selection/' | relative_url }}">Symmetry Increase and Equivariant Feature Selection</a></td>
-<td style="padding: 0.75rem 0.5rem;">Anyi Li</td>
+<td style="padding: 0.75rem 0.5rem;">Ning Lin, Jiacheng Cen, Anyi Li, Wenbing Huang, Hao Sun</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+<td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/graph_directionality_matters/' | relative_url }}">The Role of Directionality in Graph Neural Networks</a></td>
+<td style="padding: 0.75rem 0.5rem;">Bertran Miquel-Oliver, Manel Gil-Sorribes, Alexis Molina</td>
 </tr>
 </tbody>
 </table>

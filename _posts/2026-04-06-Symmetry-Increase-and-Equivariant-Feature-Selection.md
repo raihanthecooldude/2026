@@ -13,7 +13,21 @@ mermaid:
   zoomable: true
 
 authors:
+  - name: Ning Lin
+    affiliations:
+      name: Renmin University of China
+  - name: Jiacheng Cen
+    affiliations:
+      name: Renmin University of China
   - name: Anyi Li
+    affiliations:
+      name: Renmin University of China
+  - name: Wenbing Huang
+    affiliations:
+      name: Renmin University of China
+  - name: Hao Sun
+    affiliations:
+      name: Renmin University of China
 
 # must be the exact same name as your blogpost
 bibliography: 2026-04-15-Symmetry-Increase-and-Equivariant-Feature-Selection.bib
@@ -223,7 +237,7 @@ From the behavior of the averaged spherical harmonic features under planar rotat
 
 ### Visualization Results
 
-<d-cite key="joshi2023expressive"></d-cite> pointed out that equivariant features of structures such as the $$k$$-fold may exhibit degeneration. Above, we presented a classification of the degeneration behavior of the spherical harmonic map. In the following, we use experiments to show that similar degeneration also occurs for general equivariant maps.
+Joshi et al. <d-cite key="joshi2023expressive"></d-cite> pointed out that equivariant features of structures such as the $$k$$-fold may exhibit degeneration. Above, we presented a classification of the degeneration behavior of the spherical harmonic map. In the following, we use experiments to show that similar degeneration also occurs for general equivariant maps.
 
 For the $$k$$-fold, we encode it using a randomly initialized equivariant neural network. Here we choose the TFN model <d-cite key="thomas2018tensor"></d-cite>. Before encoding, we rotate the $$k$$-fold by randomly sampling a rotation axis and uniformly choosing a rotation angle. This produces the corresponding equivariant features. For features of different degrees, we then visualize the results by randomly projecting the equivariant features before and after rotation onto a 2D plane, as shown below.
 
@@ -242,7 +256,7 @@ The above visualization makes half-degeneration difficult to observe. To better 
 
 ### Collapse-to-zero Model and Symmetry Increase
 
-<d-cite key="joshi2023expressive"></d-cite> showed that low-degree equivariant features can lead to rotational collapse in 2D, whereas resolving higher-order symmetries requires sufficiently high feature degrees. However, <d-cite key="joshi2023expressive"></d-cite> did not provide a deeper theoretical explanation of this phenomenon. In contrast, <d-cite key="cen_are_2024"></d-cite> analyzed different feature dimensions separately and pointed out that one source of indistinguishability is the algebraic structure of the group representation, which may force the equivariant feature to vanish.
+Joshi et al. <d-cite key="joshi2023expressive"></d-cite> showed that low-degree equivariant features can lead to rotational collapse in 2D, whereas resolving higher-order symmetries requires sufficiently high feature degrees. However, <d-cite key="joshi2023expressive"></d-cite> did not provide a deeper theoretical explanation of this phenomenon. In contrast, <d-cite key="cen_are_2024"></d-cite> analyzed different feature dimensions separately and pointed out that one source of indistinguishability is the algebraic structure of the group representation, which may force the equivariant feature to vanish.
 
 We consider an equivariant map into the spherical harmonic representation of degree $$l = l_{0}$$, satisfying
 
@@ -266,7 +280,7 @@ $$
 
 is the averaging operator on $$Y$$ associated with $$G_x$$.
 
-<d-cite key="cen_are_2024"></d-cite> attributes the vanishing of $$f(x)$$ to the vanishing of the operator $$P_{l_{0}}^{G_{x}}$$, and further shows that this happens if and only if the trace of $$P_{l_{0}}^{G_{x}}$$ is zero. For irreducible complex spherical harmonic representations, $$\rho_{Y}(g)$$ is given by the Wigner matrices, and the conclusion can be transferred to real spherical harmonics by realification. Based on the trace formula of Wigner matrices computed in <d-cite key="engel2021point"></d-cite>, <d-cite key="cen_are_2024"></d-cite> determines when spherical harmonic encodings of point clouds with partial point-group symmetry vanish.
+Cen et al. <d-cite key="cen_are_2024"></d-cite> attributes the vanishing of $$f(x)$$ to the vanishing of the operator $$P_{l_{0}}^{G_{x}}$$, and further shows that this happens if and only if the trace of $$P_{l_{0}}^{G_{x}}$$ is zero. For irreducible complex spherical harmonic representations, $$\rho_{Y}(g)$$ is given by the Wigner matrices, and the conclusion can be transferred to real spherical harmonics by realification. Based on the trace formula of Wigner matrices computed in <d-cite key="engel2021point"></d-cite>, <d-cite key="cen_are_2024"></d-cite> determines when spherical harmonic encodings of point clouds with partial point-group symmetry vanish.
 
 However, the theory in <d-cite key="cen_are_2024"></d-cite> explains only the case of **full collapse**, which is just a special case of the degeneracy observed in our experiments. Since random projection is a linear map, our visualizations indicate that there are also nonzero features that remain indistinguishable after rotation. In other words, collapse to zero is not the only possible failure mode. This motivates us to examine degeneracy from the perspective of **symmetry increase**. We first note two basic facts.
 
