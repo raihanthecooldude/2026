@@ -57,7 +57,7 @@ This blogpost track is directly inspired by the amazing [ICLR blogpost track](ht
 </tr>
 <tr style="border-bottom: 1px solid #eee;">
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/algebraic-geometry-deep-learning-dynamics/' | relative_url }}">Blowup and Blowdown in Deep Learning</a></td>
-<td style="padding: 0.75rem 0.5rem;">Anonymous</td>
+<td style="padding: 0.75rem 0.5rem;">Hikaru Matsuoka</td>
 </tr>
 <tr style="border-bottom: 1px solid #eee;">
 <td style="padding: 0.75rem 0.5rem;"><a href="{{ '/blog/2026/topos/' | relative_url }}">TOPOS: Topological Optimal-transport Partitioned Operator Solver</a></td>
