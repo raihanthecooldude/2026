@@ -8,6 +8,8 @@ htmlwidgets: true
 
 authors:
   - name: S M Raihan Gafur
+    affiliations:
+      - name: Aalto University
 
 # must be the exact same name as your blogpost
 bibliography: 2026-04-13-4-Dimensional-Objects-as-a-Tool-to-Study-Symmetry-Learning-in-Humans-and-Machines.bib
