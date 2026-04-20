@@ -250,4 +250,4 @@ The fourth dimension turns out to be not just a curiosity but an experiment.
 
 ## Acknowledgement
 
-To be added upon acceptance.
+I would like to thank my supervisor and mentor, Stéphane Deny (Assistant Professor & PI, [BRAIN Lab](https://brain-aalto.github.io/index.html), Aalto University), for his exceptional support and guidance throughout the project. It has been a pleasure working with you.
