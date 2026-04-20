@@ -248,7 +248,7 @@ We believe that 4D objects offer a unique experimental window not available in a
 
 The fourth dimension turns out to be not just a curiosity but an experiment.
 
-Tell us what you think: [raihan.gafur.49@gmail.com](mailto:raihan.gafur.49@gmail.com)
+Tell us what you think at [raihan.gafur.49@gmail.com](mailto:raihan.gafur.49@gmail.com)
 
 ---
 
